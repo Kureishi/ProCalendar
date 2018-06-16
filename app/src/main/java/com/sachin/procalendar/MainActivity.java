@@ -16,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,7 +26,11 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static String uName;
+
+    private EditText name, email;
     private TextView dOB;                                                                           // text view to select DoB
+
     private DatePickerDialog.OnDateSetListener dateSetListener;
 
     private ImageButton nextButton;                                                                 // image button variable to go next page
@@ -39,9 +44,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        name = (EditText)findViewById(R.id.nameInput);
+        email = (EditText)findViewById(R.id.emailInput);
         dOB = (TextView)findViewById(R.id.dateOfBirth);
 
         nextButton = (ImageButton)findViewById(R.id.nextPageButton);
+
+
 
         dOB.setOnClickListener(new View.OnClickListener() {                                         // when click on the TextView
             @Override
@@ -81,6 +90,8 @@ public class MainActivity extends AppCompatActivity {
 //                } else {
 //                    requestStoragePermission();
 //                }
+
+                uName = name.getText().toString();
 
                 askPermission(Manifest.permission.READ_EXTERNAL_STORAGE, STORAGE_PERMISSION_CODE);
                 askPermission(Manifest.permission.ACCESS_FINE_LOCATION, LOCATION_REQUEST_CODE);
