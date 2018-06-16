@@ -27,6 +27,8 @@ import java.util.Date;
 public class MainActivity extends AppCompatActivity {
 
     public static String uName;
+    public static String uEmail;
+    public static String uDate;
 
     private EditText name, email;
     private TextView dOB;                                                                           // text view to select DoB
@@ -92,6 +94,8 @@ public class MainActivity extends AppCompatActivity {
 //                }
 
                 uName = name.getText().toString();
+                uEmail = email.getText().toString();
+                uDate = dOB.getText().toString();
 
                 askPermission(Manifest.permission.READ_EXTERNAL_STORAGE, STORAGE_PERMISSION_CODE);
                 askPermission(Manifest.permission.ACCESS_FINE_LOCATION, LOCATION_REQUEST_CODE);

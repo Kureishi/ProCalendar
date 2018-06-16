@@ -15,6 +15,6 @@ public class secondActivity extends AppCompatActivity {
 
 
         test = (TextView)findViewById(R.id.test);
-        test.setText(MainActivity.uName);
+        test.setText(MainActivity.uDate);
     }
 }
