@@ -5,14 +5,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/background_2"
     tools:context=".secondActivity">
 
-    <TextView
-        android:id="@+id/test"
-        android:layout_width="wrap_content"
+
+    <ImageView
+        android:id="@+id/selectModeMessage"
+        android:layout_width="355dp"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Second Screen"
-        android:textSize="30sp" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="106dp"
+        app:srcCompat="@drawable/select_mode" />
+
+    <ImageView
+        android:id="@+id/noteModeChangeableMessage"
+        android:layout_width="319dp"
+        android:layout_height="138dp"
+        android:layout_below="@+id/selectModeMessage"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/note_mode_changeable" />
+
+    <ImageButton
+        android:id="@+id/entrepreneurOptionButton"
+        android:layout_width="305dp"
+        android:layout_height="63dp"
+        android:layout_below="@+id/noteModeChangeableMessage"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/entrepreneur_option_button" />
+
+    <ImageButton
+        android:id="@+id/professionalOptionButton"
+        android:layout_width="304dp"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="124dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/professional_option_button" />
+
+    <ImageButton
+        android:id="@+id/studentOptionButton"
+        android:layout_width="302dp"
+        android:layout_height="66dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="41dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/student_option_button" />
 </RelativeLayout>
