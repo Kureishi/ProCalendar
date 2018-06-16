@@ -39,9 +39,8 @@
         android:id="@+id/professionalOptionButton"
         android:layout_width="304dp"
         android:layout_height="65dp"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/entrepreneurOptionButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="124dp"
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/professional_option_button" />
 
@@ -49,9 +48,8 @@
         android:id="@+id/studentOptionButton"
         android:layout_width="302dp"
         android:layout_height="66dp"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/professionalOptionButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="41dp"
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/student_option_button" />
 </RelativeLayout>
