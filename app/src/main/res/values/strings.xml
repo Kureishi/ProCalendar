@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ProCalendar</string>
+    
+    <string-array name="student_eduLevel">
+        <item>Select Eduction Level from Drop Down Below</item>
+        <item>University</item>
+        <item>College</item>
+        <item>School</item>
+    </string-array>
 </resources>
