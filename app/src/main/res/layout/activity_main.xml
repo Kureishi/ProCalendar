@@ -10,62 +10,86 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="335dp"
-        android:layout_height="227dp"
+        android:layout_width="341dp"
+        android:layout_height="257dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="143dp"
         app:srcCompat="@drawable/logo" />
 
     <ImageView
         android:id="@+id/message"
-        android:layout_width="330dp"
-        android:layout_height="118dp"
+        android:layout_width="345dp"
+        android:layout_height="89dp"
         android:layout_centerInParent="true"
         app:srcCompat="@drawable/thank_you" />
 
     <EditText
         android:id="@+id/nameInput"
-        android:layout_width="358dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/message"
-        android:ems="10"
-        android:hint="Name"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="227dp"
+        android:ems="16"
+        android:hint="Full Name"
         android:inputType="textPersonName"
-        android:textSize="15sp"
-        android:layout_alignParentRight="true" />
+        android:textSize="15sp" />
 
     <EditText
         android:id="@+id/emailInput"
-        android:layout_width="358dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/nameInput"
-        android:ems="10"
-        android:hint="email address"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="165dp"
+        android:ems="16"
+        android:hint="Email address"
         android:inputType="textEmailAddress"
-        android:textSize="15sp"
-        android:layout_alignParentRight="true" />
+        android:textSize="15sp" />
+
+    <!--<Button-->
+        <!--android:id="@+id/picDate"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Pick Date"-->
+        <!--android:onClick="datePicker"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginBottom="100dp" />-->
+
+    <!--<TextView-->
+        <!--android:layout_below="@+id/picDate"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/showDate"-->
+        <!--android:textSize="18dp"/>-->
 
     <TextView
         android:id="@+id/dateOfBirth"
-        android:layout_width="358dp"
-        android:layout_height="wrap_content"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="109dp"
-        android:hint="Date of birth DD/MM/YYYY"
-        android:layout_alignParentRight="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:hint=" Date of birth (DD/MM/YYYY)" />
+
+    <ImageView
+        android:id="@+id/gridlock_small"
+        android:layout_width="420dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/gridlock_small" />
 
     <ImageButton
         android:id="@+id/nextPageButton"
-        android:layout_width="190dp"
-        android:layout_height="34dp"
+        android:layout_width="124dp"
+        android:layout_height="28dp"
         android:layout_alignEnd="@+id/logo"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="52dp"
-        app:srcCompat="@drawable/next_page"
-        android:layout_alignRight="@+id/logo" />
+        android:layout_alignRight="@+id/logo"
+        android:layout_marginBottom="70dp"
+        app:srcCompat="@drawable/next_page" />
 
 </RelativeLayout>
