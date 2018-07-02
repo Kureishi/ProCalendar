@@ -15,6 +15,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.app.DatePickerDialog;
 import android.widget.DatePicker;
@@ -97,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         dOB = (TextView)findViewById(R.id.dateOfBirth);
 
         nextButton = (ImageButton)findViewById(R.id.nextPageButton);
-
+        nextButton.setEnabled(false);                                                               // disabled at beginning
 
 
         dOB.setOnClickListener(new View.OnClickListener() {                                         // when click on the TextView
@@ -128,6 +130,10 @@ public class MainActivity extends AppCompatActivity {
                 dOB.setText(date);                                                                  // set the text to date (becomes content)
             }
         };
+
+        name.addTextChangedListener(signUpTextWatcher);                                             // when the text in field changes/added
+        email.addTextChangedListener(signUpTextWatcher);
+        dOB.addTextChangedListener(signUpTextWatcher);
 
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -226,4 +232,25 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
+
+    private TextWatcher signUpTextWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int start, int before, int count) {    // when type in or remove character
+            String uNameInput = name.getText().toString();
+            String uEmailInput = email.getText().toString();
+            String uDateInput = dOB.getText().toString();
+
+            nextButton.setEnabled(!uNameInput.isEmpty() && !uEmailInput.isEmpty() && !uDateInput.isEmpty());    // set to enable click
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+
+        }
+    };
 }
