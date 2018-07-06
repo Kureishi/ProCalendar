@@ -112,11 +112,11 @@ public class MainActivity extends AppCompatActivity {
 
                 DatePickerDialog dialog = new DatePickerDialog(
                         MainActivity.this,
-                        android.R.style.Theme_Holo_Light_Dialog_MinWidth,                           // style of calendar
+                        android.R.style.Theme_DeviceDefault_Dialog,                           // style of calendar
                         dateSetListener,
                         year, month, day);                                                          // set to current date
 
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));     // background transparent
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.BLACK));     // background transparent
                 dialog.show();
             }
         });

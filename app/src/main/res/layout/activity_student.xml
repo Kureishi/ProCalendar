@@ -5,23 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_3"
+    android:background="@drawable/background_2"
     tools:context=".studentActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="84dp"
-        android:text="Student Mode"
-        android:textColor="@android:color/holo_green_light"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="16dp" />
+    <ImageView
+        android:id="@+id/studentSetupSubheading"
+        android:layout_width="154dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="90dp"
+        app:srcCompat="@drawable/student_setup_subheading"/>
 
     <Spinner
         android:id="@+id/educationLevelDropDown"
@@ -29,26 +22,29 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="139dp"
+        android:layout_marginTop="130dp"
         android:layout_alignParentLeft="true" />
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="251dp"
-        android:layout_height="85dp"
-        android:layout_above="@+id/imageButton2"
+        android:layout_width="295dp"
+        android:layout_height="76dp"
+        android:layout_below="@+id/checkBox"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
         app:srcCompat="@drawable/quick_setup_option_button" />
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="251dp"
-        android:layout_height="74dp"
-        android:layout_alignParentBottom="true"
+        android:layout_width="295dp"
+        android:layout_height="76dp"
+        android:layout_below="@+id/imageButton"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="39dp"
         android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
         app:srcCompat="@drawable/manual_setup_option_button" />
 
     <EditText
@@ -57,7 +53,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/educationLevelDropDown"
-        android:ems="10"
+        android:layout_marginTop="20dp"
+        android:ems="16"
         android:inputType="textPersonName"
         android:hint="Commute Time"
         android:layout_alignParentLeft="true" />
@@ -67,31 +64,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/commuteTime"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:ems="10"
+        android:ems="16"
         android:hint="Number of Courses"
         android:inputType="textPersonName" />
 
-    <TextView
-        android:id="@+id/enterScheduleText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textView"
-        android:layout_marginBottom="252dp"
-        android:text=" Enter Schedule:"
-        android:textColor="@android:color/holo_green_light"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_alignLeft="@+id/textView" />
+    <ImageView
+        android:id="@+id/enterScheduleHeading"
+        android:layout_width="173dp"
+        android:layout_height="28dp"
+        android:layout_below="@+id/numOfCourses"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/enter_schedule_heading"/>
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textView"
-        android:layout_marginBottom="210dp"
-        android:text="8 hours, all working days"
-        android:layout_alignLeft="@+id/textView" />
+        android:layout_below="@+id/enterScheduleHeading"
+        android:layout_marginTop="20dp"
+        android:ems="16"
+        android:text="8 hours, all working days" />
+
+    <ImageButton
+        android:id="@+id/backPageButton"
+        android:layout_width="124dp"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="90dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/last_page"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true" />
+
 </RelativeLayout>
