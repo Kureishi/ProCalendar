@@ -30,48 +30,6 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Date;
 
-//public class MainActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState){
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
-//    }
-//
-//    public void datePicker(View view){
-//
-//        DatePickerFragment fragment = new DatePickerFragment();
-//        fragment.show(getSupportFragmentManager(), "date");
-//    }
-//
-//    private void setDate(final Calendar calendar) {
-//        final DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.MEDIUM);
-//        ((TextView) findViewById(R.id.showDate)).setText(dateFormat.format(calendar.getTime()));
-//
-//
-//    }
-//
-//    public void onDateSet(DatePicker view, int year, int month, int day) {
-//        Calendar cal = new GregorianCalendar(year, month, day);
-//        setDate(cal);
-//    }
-//
-//    public static class DatePickerFragment extends DialogFragment {
-//
-//        @Override
-//        public Dialog onCreateDialog(Bundle savedInstanceState){
-//            final Calendar c = Calendar.getInstance();
-//            int year = c.get(Calendar.YEAR);
-//            int month = c.get(Calendar.MONTH);
-//            int day = c.get(Calendar.DAY_OF_MONTH);
-//
-//            return new DatePickerDialog(getActivity(),
-//                    (DatePickerDialog.OnDateSetListener)
-//                            getActivity(),year, month, day);
-//        }
-//    }
-//}
-
 public class MainActivity extends AppCompatActivity {
 
     public static String uName;
@@ -112,11 +70,11 @@ public class MainActivity extends AppCompatActivity {
 
                 DatePickerDialog dialog = new DatePickerDialog(
                         MainActivity.this,
-                        android.R.style.Theme_DeviceDefault_Dialog,                           // style of calendar
+                        android.R.style.Theme_DeviceDefault_Dialog,                                 // style of calendar
                         dateSetListener,
                         year, month, day);                                                          // set to current date
 
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.BLACK));     // background transparent
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.BLACK));           // background transparent
                 dialog.show();
             }
         });
@@ -138,12 +96,6 @@ public class MainActivity extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                if (ContextCompat.checkSelfPermission(MainActivity.this,                     // check if specified permission already granted
-//                        Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-//                    Toast.makeText(MainActivity.this, "Permission Already Granted", Toast.LENGTH_SHORT).show();
-//                } else {
-//                    requestStoragePermission();
-//                }
 
                 uName = name.getText().toString();
                 uEmail = email.getText().toString();
@@ -159,44 +111,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-//    private void requestStoragePermission() {
-//        if(ActivityCompat.shouldShowRequestPermissionRationale(this,                         // show why need permission. if user denied before, but accesses it again
-//                Manifest.permission.READ_EXTERNAL_STORAGE)) {
-//            new AlertDialog.Builder(this)
-//                    .setTitle("Permission Needed")
-//                    .setMessage("Permission needed to access storage")                              // NOT FINALIZED (can be edited)
-//                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialogInterface, int i) {               // request permission only if click Ok
-//                            ActivityCompat.requestPermissions(MainActivity.this, new String[]
-//                                    {Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
-//                        }
-//                    })
-//
-//                    .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialogInterface, int i) {
-//                            dialogInterface.dismiss();                                              // if cancel, dismiss the dialog (not alert user)
-//                        }
-//                    })
-//
-//                    .create().show();                                                               // create dialog and show it
-//
-//        } else {                                                                                    // just want to request permission (with Storage Permission code)
-//            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
-//        }
-//    }
-
-//    @Override
-//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-//        if (requestCode == STORAGE_PERMISSION_CODE) {                                               // check result of permission
-//            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {  // check if the permission was granted
-//                Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
-//            } else {
-//                Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();
-//            }
-//        }
-//    }
 
     private void askPermission(String permission, int requestCode) {
         if (ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED) {     // not have permission
