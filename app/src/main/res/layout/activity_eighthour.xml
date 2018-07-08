@@ -219,7 +219,7 @@
         android:layout_toRightOf="@+id/startButton"
         android:layout_marginTop="43dp"
         android:layout_marginLeft="10dp"
-        android:text="TextView1" />
+        android:text="Start Time" />
 
     <ImageButton
         android:id="@+id/startButton"
@@ -241,7 +241,7 @@
         android:layout_toRightOf="@+id/endButton"
         android:layout_marginTop="68dp"
         android:layout_marginLeft="10dp"
-        android:text="TextView2" />
+        android:text="End Time" />
 
     <ImageButton
         android:id="@+id/endButton"

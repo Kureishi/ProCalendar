@@ -19,7 +19,7 @@ public class eightHourActivity extends AppCompatActivity {
     TextView endTime;
 
     Calendar currentTime;
-    int hour, minute;
+    int cuurentHour, currentMinute;
     String format;
 
     @Override
@@ -32,47 +32,72 @@ public class eightHourActivity extends AppCompatActivity {
         startTime = (TextView)findViewById(R.id.startTime);
         endTime = (TextView)findViewById(R.id.endTime);
 
-        currentTime = Calendar.getInstance();
-
-        hour = currentTime.get(Calendar.HOUR_OF_DAY);
-        minute = currentTime.get(Calendar.MINUTE);
-
-        selectedTimeFormat(hour);
-
-        startTime.setText(hour + " : " + minute + " " + format);
-
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                currentTime = Calendar.getInstance();
+                cuurentHour = currentTime.get(Calendar.HOUR_OF_DAY);
+                currentMinute = currentTime.get(Calendar.MINUTE);
+
                 TimePickerDialog timePickerDialog = new TimePickerDialog(eightHourActivity.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
-                    public void onTimeSet(TimePicker timePicker, int hour, int minute) {
-                        selectedTimeFormat(hour);
-                        startTime.setText(hour + " : " + minute + " " + format);
+                    public void onTimeSet(TimePicker timePicker, int hourOfDay, int minute) {
+
+                        if(hourOfDay == 0) {
+                            hourOfDay = 12;
+                            format = "AM";
+                        }
+                        else if(hourOfDay == 12) {
+                            format="PM";
+                        }
+                        else if(hourOfDay >= 12) {
+                            hourOfDay -= 12;
+                            format = "PM";
+                        }
+                        else {
+                            format = "AM";
+                        }
+
+                        startTime.setText(String.format("%d:%d", hourOfDay, minute) + " " + format);
                     }
-                }, hour, minute, false);
+                }, cuurentHour, currentMinute, false);
+                timePickerDialog.show();
+            }
+        });
+
+        endButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                currentTime = Calendar.getInstance();
+                cuurentHour = currentTime.get(Calendar.HOUR_OF_DAY);
+                currentMinute = currentTime.get(Calendar.MINUTE);
+
+                TimePickerDialog timePickerDialog = new TimePickerDialog(eightHourActivity.this, new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker timePicker, int hourOfDay, int minute) {
+
+                        if(hourOfDay == 0) {
+                            hourOfDay = 12;
+                            format = "AM";
+                        }
+                        else if(hourOfDay == 12) {
+                            format="PM";
+                        }
+                        else if(hourOfDay >= 12) {
+                            hourOfDay -= 12;
+                            format = "PM";
+                        }
+                        else {
+                            format = "AM";
+                        }
+
+                        endTime.setText(String.format("%d:%d", hourOfDay, minute) + " " + format);
+                    }
+                }, cuurentHour, currentMinute, false);
                 timePickerDialog.show();
             }
         });
     }
-
-    public void selectedTimeFormat(int hour) {
-        if(hour == 0) {
-            hour += 12;                                                                             // if 0 -> transform to read 12
-            format = "AM";
-        }
-        else if(hour == 12) {
-            format = "PM";
-        }
-        else if(hour > 12){
-            hour -= 12;
-            format = "PM";
-        }
-        else {
-            format = "AM";
-        }
-    }
-
-
 }

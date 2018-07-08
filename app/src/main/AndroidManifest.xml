@@ -23,6 +23,7 @@
         <activity android:name=".secondActivity" />
         <activity android:name=".studentActivity" />
         <activity android:name=".professionalActivity" />
+        <activity android:name=".eightHourActivity" />
         <activity android:name=".entrepreneurActivity"></activity>
     </application>
 

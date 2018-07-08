@@ -1,11 +1,13 @@
 package com.sachin.procalendar;
 
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TimePicker;
@@ -16,6 +18,8 @@ public class studentActivity extends AppCompatActivity implements AdapterView.On
     EditText commuteTime;
     TimePickerDialog timePickerDialog;
 
+    CheckBox eightHourCheckBox;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +28,8 @@ public class studentActivity extends AppCompatActivity implements AdapterView.On
         Spinner eduLevelSpinner = findViewById(R.id.educationLevelDropDown);
 
         commuteTime = (EditText)findViewById(R.id.commuteTime);
+
+        eightHourCheckBox = (CheckBox)findViewById(R.id.checkBox);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,           // reference spinner/drop-down with array created
                 R.array.student_eduLevel, android.R.layout.simple_spinner_item);                    // layout file for single item
@@ -44,6 +50,20 @@ public class studentActivity extends AppCompatActivity implements AdapterView.On
                     }
                 }, 0, 0, false);
                 timePickerDialog.show();
+            }
+        });
+
+        eightHourCheckBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {                                                        // view is checkbox which user interracts with
+                CheckBox temp = (CheckBox)view;
+                if(temp.isChecked()) {
+                    Intent intentSecondActivity = new Intent(studentActivity.this, eightHourActivity.class);
+                    startActivity(intentSecondActivity);
+                }
+//                else {
+//
+//                }
             }
         });
     }
