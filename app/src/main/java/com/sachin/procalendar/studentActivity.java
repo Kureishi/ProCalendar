@@ -46,7 +46,7 @@ public class studentActivity extends AppCompatActivity implements AdapterView.On
                     @Override
                     public void onTimeSet(TimePicker timePicker, int hourOfDay, int minutes) {      // allows user to choose time
 
-                        commuteTime.setText(hourOfDay + " hours " + minutes + " minutes");          // how display in EditText after
+                        commuteTime.setText(hourOfDay + " hour(s) " + minutes + " minute(s)");          // how display in EditText after
                     }
                 }, 0, 0, false);
                 timePickerDialog.show();

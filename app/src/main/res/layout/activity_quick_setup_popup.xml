@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_2"
+    tools:context=".quickSetupPopupActivity">
+
+    <ImageView
+        android:id="@+id/quickSetupSubheading"
+        android:layout_width="154dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="90dp"
+        app:srcCompat="@drawable/quick_setup_subheading"/>
+
+    <ImageView
+        android:id="@+id/quickSetupPopup"
+        android:layout_width="338dp"
+        android:layout_height="504dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        app:srcCompat="@drawable/student_setup_popup"/>
+
+    <ImageButton
+        android:id="@+id/closeButton"
+        android:layout_width="61dp"
+        android:layout_height="63dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="140dp"
+        android:layout_marginRight="60dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/close_button" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="295dp"
+        android:layout_height="76dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="87dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/start_quick_setup_button" />
+
+</RelativeLayout>

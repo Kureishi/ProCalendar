@@ -199,6 +199,8 @@
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/friday_button" />
 
+    <!--Collapsed ImageButtons for days of the week. Selected versions are in the background-->
+
     <EditText
         android:id="@+id/schoolEventName"
         android:layout_width="match_parent"

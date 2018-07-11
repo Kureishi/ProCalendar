@@ -56,7 +56,7 @@
         android:layout_marginTop="20dp"
         android:ems="16"
         android:inputType="textPersonName"
-        android:hint="Commute Time"
+        android:hint="Commute Time: 0 hour(s) and 0 minute(s)"
         android:layout_alignParentLeft="true" />
 
     <EditText

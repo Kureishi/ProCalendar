@@ -1,0 +1,1637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".quickSetupActivity">
+
+    <EditText
+        android:id="@+id/schoolEventName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/saturdayButton"
+        android:layout_marginTop="400dp"
+        android:ems="16"
+        android:inputType="textPersonName"
+        android:hint="School/Event Name"
+        android:layout_alignParentLeft="true" />
+
+    <!--Spinner to select Lecture/Tutorial/Lab (Class Type)-->
+
+    <Spinner
+        android:id="@+id/classTypeDropDown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/schoolEventName"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true" />
+
+    <!--endButton overlapped by startButton-->
+
+    <TextView
+        android:id="@+id/startTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/classTypeDropDown"
+        android:layout_toRightOf="@+id/startButton"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:text="Start Time" />
+
+    <ImageButton
+        android:id="@+id/startButton"
+        android:layout_width="140dp"
+        android:layout_height="59dp"
+        android:layout_below="@+id/classTypeDropDown"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/start_button" />
+
+    <TextView
+        android:id="@+id/endTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/classTypeDropDown"
+        android:layout_toRightOf="@+id/endButton"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:text="End Time" />
+
+    <ImageButton
+        android:id="@+id/endButton"
+        android:layout_width="140dp"
+        android:layout_height="59dp"
+        android:layout_below="@+id/classTypeDropDown"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/end_button" />
+
+
+    <ImageButton
+        android:id="@+id/backPageButton"
+        android:layout_width="124dp"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="43dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/last_page"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true" />
+
+    <ImageButton
+        android:id="@+id/nextPageButton"
+        android:layout_width="124dp"
+        android:layout_height="28dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/next_page"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true" />
+
+    <!--Collapsed ImageButtons for days of the week. Selected versions are in the background-->
+
+    <ImageButton
+    android:id="@+id/saturdayButtonSelected"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_marginLeft="35dp"
+    android:layout_marginTop="10dp"
+    android:scaleType="fitCenter"
+    android:background="@android:color/transparent"
+    app:srcCompat="@drawable/saturday_button_selected" />
+
+    <ImageButton
+    android:id="@+id/saturdayButton"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_marginLeft="35dp"
+    android:layout_marginTop="10dp"
+    android:scaleType="fitCenter"
+    android:background="@android:color/transparent"
+    app:srcCompat="@drawable/saturday_button" />
+
+    <ImageButton
+    android:id="@+id/sundayButtonSelected"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_alignParentTop="true"
+    android:layout_toRightOf="@+id/saturdayButtonSelected"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/transparent"
+    android:scaleType="fitCenter"
+    app:srcCompat="@drawable/sunday_button_selected" />
+
+    <ImageButton
+    android:id="@+id/sundayButton"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_alignParentTop="true"
+    android:layout_toRightOf="@+id/saturdayButton"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/transparent"
+    android:scaleType="fitCenter"
+    app:srcCompat="@drawable/sunday_button" />
+
+    <ImageButton
+    android:id="@+id/mondayButtonSelected"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_alignParentTop="true"
+    android:layout_toRightOf="@+id/sundayButtonSelected"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/transparent"
+    android:scaleType="fitCenter"
+    app:srcCompat="@drawable/monday_button_selected" />
+
+    <ImageButton
+    android:id="@+id/mondayButton"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_alignParentTop="true"
+    android:layout_toRightOf="@+id/sundayButton"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/transparent"
+    android:scaleType="fitCenter"
+    app:srcCompat="@drawable/monday_button" />
+
+    <ImageButton
+    android:id="@+id/tuesdayButtonSelected"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_alignParentTop="true"
+    android:layout_toRightOf="@+id/mondayButtonSelected"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/transparent"
+    android:scaleType="fitCenter"
+    app:srcCompat="@drawable/tuesday_button_selected" />
+
+    <ImageButton
+    android:id="@+id/tuesdayButton"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_alignParentTop="true"
+    android:layout_toRightOf="@+id/mondayButton"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/transparent"
+    android:scaleType="fitCenter"
+    app:srcCompat="@drawable/tuesday_button" />
+
+    <ImageButton
+    android:id="@+id/wednesdayButtonSelected"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_alignParentTop="true"
+    android:layout_toRightOf="@+id/tuesdayButtonSelected"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/transparent"
+    android:scaleType="fitCenter"
+    app:srcCompat="@drawable/wednesday_button_selected" />
+
+    <ImageButton
+    android:id="@+id/wednesdayButton"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_alignParentTop="true"
+    android:layout_toRightOf="@+id/tuesdayButton"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/transparent"
+    android:scaleType="fitCenter"
+    app:srcCompat="@drawable/wednesday_button" />
+
+    <ImageButton
+    android:id="@+id/thursdayButtonSelected"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_alignParentTop="true"
+    android:layout_toRightOf="@+id/wednesdayButtonSelected"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/transparent"
+    android:scaleType="fitCenter"
+    app:srcCompat="@drawable/thursday_button_selected" />
+
+    <ImageButton
+    android:id="@+id/thursdayButton"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_alignParentTop="true"
+    android:layout_toRightOf="@+id/wednesdayButton"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/transparent"
+    android:scaleType="fitCenter"
+    app:srcCompat="@drawable/thursday_button" />
+
+    <ImageButton
+    android:id="@+id/fridayButtonSelected"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_alignParentTop="true"
+    android:layout_toRightOf="@+id/thursdayButtonSelected"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/transparent"
+    android:scaleType="fitCenter"
+    app:srcCompat="@drawable/friday_button_selected" />
+
+    <ImageButton
+    android:id="@+id/fridayButton"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_alignParentTop="true"
+    android:layout_toRightOf="@+id/thursdayButton"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@android:color/transparent"
+    android:scaleType="fitCenter"
+    app:srcCompat="@drawable/friday_button" />
+
+    <!--Collapsed ImageButtons for days of the week. Selected versions are in the background-->
+
+    <!--GridLayout of week-->
+
+    <android.support.v7.widget.GridLayout
+        android:layout_width="371dp"
+        android:layout_height="383dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:padding="10dp"
+        app:columnCount="8"
+        app:rowCount="24">
+
+        <ImageView
+            android:id="@+id/sa12am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_columnSpan="2"
+            app:layout_row="0"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa1am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="1"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa2am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="2"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa3am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="3"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa4am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="4"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa5am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="5"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa6am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="6"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa7am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="7"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa8am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="8"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa9am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="9"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa10am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="10"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa11am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="11"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa12pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="12"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa1pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="13"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa2pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="14"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa3pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="15"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa4pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="16"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa5pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="17"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa6pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="18"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa7pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="19"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa8pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="20"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa9pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="21"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa10pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="22"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/sa11pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="0"
+            app:layout_row="23"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su12am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="0"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su1am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="1"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su2am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="2"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su3am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="3"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su4am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="4"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su5am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="5"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su6am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="6"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su7am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="7"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su8am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="8"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su9am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="9"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su10am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="10"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su11am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="11"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su12pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="12"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su1pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="13"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su2pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="14"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su3pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="15"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su4pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="16"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su5pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="17"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su6pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="18"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su7pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="19"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su8pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="20"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su9pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="21"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su10pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="22"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/su11pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="1"
+            app:layout_row="23"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo12am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="0"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo1am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="1"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo2am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="2"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo3am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="3"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo4am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="4"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo5am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="5"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo6am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="6"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo7am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="7"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo8am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="8"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo9am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="9"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo10am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="10"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo11am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="11"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo12pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="12"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo1pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="13"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo2pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="14"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo3pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="15"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo4pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="16"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo5pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="17"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo6pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="18"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo7pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="19"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo8pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="20"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo9pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="21"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo10pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="22"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/mo11pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="2"
+            app:layout_row="23"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu12am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="0"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu1am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="1"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu2am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="2"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu3am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="3"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu4am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="4"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu5am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="5"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu6am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="6"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu7am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="7"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu8am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="8"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu9am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="9"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu10am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="10"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu11am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="11"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu12pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="12"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu1pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="13"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu2pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="14"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu3pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="15"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu4pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="16"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu5pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="17"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu6pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="18"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu7pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="19"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu8pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="20"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu9pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="21"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu10pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="22"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/tu11pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="3"
+            app:layout_row="23"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we12am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="0"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we1am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="1"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we2am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="2"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we3am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="3"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we4am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="4"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we5am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="5"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we6am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="6"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we7am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="7"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we8am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="8"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we9am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="9"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we10am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="10"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we11am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="11"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we12pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="12"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we1pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="13"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we2pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="14"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we3pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="15"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we4pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="16"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we5pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="17"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we6pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="18"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we7pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="19"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we8pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="20"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we9pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="21"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we10pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="22"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/we11pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="4"
+            app:layout_row="23"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th12am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="0"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th1am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="1"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th2am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="2"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th3am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="3"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th4am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="4"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th5am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="5"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th6am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="6"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th7am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="7"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th8am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="8"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th9am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="9"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th10am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="10"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th11am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="11"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th12pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="12"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th1pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="13"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th2pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="14"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th3pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="15"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th4pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="16"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th5pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="17"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th6pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="18"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th7pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="19"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th8pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="20"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th9pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="21"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th10pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="22"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/th11pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="5"
+            app:layout_row="23"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr12am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="0"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr1am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="1"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr2am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="2"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr3am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="3"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr4am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="4"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr5am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="5"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr6am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="6"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr7am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="7"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr8am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="8"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr9am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="9"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr10am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="10"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr11am"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="11"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr12pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="12"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr1pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="13"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr2pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="14"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr3pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="15"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr4pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="16"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr5pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="17"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr6pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="18"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr7pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="19"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr8pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="20"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr9pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="21"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr10pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="22"
+            app:srcCompat="@drawable/hour_block" />
+
+        <ImageView
+            android:id="@+id/fr11pm"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            app:layout_column="6"
+            app:layout_row="23"
+            app:srcCompat="@drawable/hour_block" />
+
+    </android.support.v7.widget.GridLayout>
+
+    <!--GridLayout of week-->
+
+</RelativeLayout>
