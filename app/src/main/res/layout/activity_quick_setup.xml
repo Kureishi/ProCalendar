@@ -16,7 +16,7 @@
         android:layout_marginTop="400dp"
         android:ems="16"
         android:inputType="textPersonName"
-        android:hint="School/Event Name"
+        android:hint="School/Class/Event Name"
         android:layout_alignParentLeft="true" />
 
     <!--Spinner to select Lecture/Tutorial/Lab (Class Type)-->
@@ -31,28 +31,6 @@
         android:layout_alignParentLeft="true" />
 
     <!--endButton overlapped by startButton-->
-
-    <TextView
-        android:id="@+id/startTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/classTypeDropDown"
-        android:layout_toRightOf="@+id/startButton"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="10dp"
-        android:text="Start Time" />
-
-    <ImageButton
-        android:id="@+id/startButton"
-        android:layout_width="140dp"
-        android:layout_height="59dp"
-        android:layout_below="@+id/classTypeDropDown"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="25dp"
-        android:scaleType="fitCenter"
-        android:background="@android:color/transparent"
-        app:srcCompat="@drawable/start_button" />
 
     <TextView
         android:id="@+id/endTime"
@@ -76,6 +54,27 @@
         android:background="@android:color/transparent"
         app:srcCompat="@drawable/end_button" />
 
+    <TextView
+        android:id="@+id/startTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/classTypeDropDown"
+        android:layout_toRightOf="@+id/startButton"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:text="Start Time" />
+
+    <ImageButton
+        android:id="@+id/startButton"
+        android:layout_width="140dp"
+        android:layout_height="59dp"
+        android:layout_below="@+id/classTypeDropDown"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/start_button" />
 
     <ImageButton
         android:id="@+id/backPageButton"
