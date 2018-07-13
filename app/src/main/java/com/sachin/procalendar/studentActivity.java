@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -20,6 +21,8 @@ public class studentActivity extends AppCompatActivity implements AdapterView.On
 
     CheckBox eightHourCheckBox;
 
+    ImageButton quickSetupButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +33,8 @@ public class studentActivity extends AppCompatActivity implements AdapterView.On
         commuteTime = (EditText)findViewById(R.id.commuteTime);
 
         eightHourCheckBox = (CheckBox)findViewById(R.id.checkBox);
+
+        quickSetupButton = (ImageButton)findViewById(R.id.quickSetupButton);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,           // reference spinner/drop-down with array created
                 R.array.student_eduLevel, android.R.layout.simple_spinner_item);                    // layout file for single item
@@ -64,6 +69,14 @@ public class studentActivity extends AppCompatActivity implements AdapterView.On
 //                else {
 //
 //                }
+            }
+        });
+
+        quickSetupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentQuickSetupPopup = new Intent(studentActivity.this, quickSetupPopupActivity.class);
+                startActivity(intentQuickSetupPopup);
             }
         });
     }

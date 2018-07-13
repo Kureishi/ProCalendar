@@ -24,6 +24,8 @@
         <activity android:name=".studentActivity" />
         <activity android:name=".professionalActivity" />
         <activity android:name=".eightHourActivity" />
+        <activity android:name=".quickSetupPopupActivity" />
+        <activity android:name=".quickSetupActivity" />
         <activity android:name=".entrepreneurActivity"></activity>
     </application>
 

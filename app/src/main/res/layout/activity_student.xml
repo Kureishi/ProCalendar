@@ -26,7 +26,7 @@
         android:layout_alignParentLeft="true" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/quickSetupButton"
         android:layout_width="295dp"
         android:layout_height="76dp"
         android:layout_below="@+id/checkBox"
@@ -40,7 +40,7 @@
         android:id="@+id/imageButton2"
         android:layout_width="295dp"
         android:layout_height="76dp"
-        android:layout_below="@+id/imageButton"
+        android:layout_below="@+id/quickSetupButton"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:scaleType="fitCenter"

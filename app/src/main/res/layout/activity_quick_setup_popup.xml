@@ -38,7 +38,7 @@
         app:srcCompat="@drawable/close_button" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/beginButton"
         android:layout_width="295dp"
         android:layout_height="76dp"
         android:layout_alignParentBottom="true"

@@ -275,6 +275,7 @@
     <!--GridLayout of week-->
 
     <android.support.v7.widget.GridLayout
+        android:id="@+id/mainGrid"
         android:layout_width="371dp"
         android:layout_height="383dp"
         android:layout_alignParentTop="true"
