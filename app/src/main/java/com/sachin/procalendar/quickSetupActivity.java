@@ -42,12 +42,21 @@ public class quickSetupActivity extends AppCompatActivity{
         startTime = (TextView)findViewById(R.id.startTime);
         endTime = (TextView)findViewById(R.id.endTime);
 
+        // Implement to select column with day
+
         //setSingleEvent(mainGrid);
-        setToggleEvent(mainGrid);
+        //setToggleEvent(mainGrid);
 
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                int visibility = firstLL.getVisibility();
+
+                if(visibility==View.GONE) {
+                    firstLL.setVisibility(View.VISIBLE);
+                    secondLL.setVisibility(View.GONE);
+                }
 
                 currentTime = Calendar.getInstance();
                 currentHour = currentTime.get(Calendar.HOUR_OF_DAY);
@@ -82,6 +91,13 @@ public class quickSetupActivity extends AppCompatActivity{
         endButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                int visibility = secondLL.getVisibility();
+
+                if(visibility==View.GONE) {
+                    secondLL.setVisibility(View.VISIBLE);
+                    firstLL.setVisibility(View.GONE);
+                }
 
                 currentTime = Calendar.getInstance();
                 currentHour = currentTime.get(Calendar.HOUR_OF_DAY);
