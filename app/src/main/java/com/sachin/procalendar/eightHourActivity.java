@@ -59,7 +59,7 @@ public class eightHourActivity extends AppCompatActivity {
                             format = "AM";
                         }
 
-                        startTime.setText(String.format("%d:%d", hourOfDay, minute) + " " + format);
+                        startTime.setText(String.format("%02d:%02d", hourOfDay, minute) + " " + format);
                     }
                 }, cuurentHour, currentMinute, false);
                 timePickerDialog.show();
@@ -93,7 +93,7 @@ public class eightHourActivity extends AppCompatActivity {
                             format = "AM";
                         }
 
-                        endTime.setText(String.format("%d:%d", hourOfDay, minute) + " " + format);
+                        endTime.setText(String.format("%02d:%02d", hourOfDay, minute) + " " + format);
                     }
                 }, cuurentHour, currentMinute, false);
                 timePickerDialog.show();
