@@ -37,44 +37,59 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/classTypeDropDown"
-        android:layout_toRightOf="@+id/endButton"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="170dp"
         android:text="End Time" />
 
-    <ImageButton
-        android:id="@+id/endButton"
-        android:layout_width="140dp"
-        android:layout_height="59dp"
+    <LinearLayout
+        android:id="@+id/first_11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/classTypeDropDown"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="25dp"
-        android:scaleType="fitCenter"
-        android:background="@android:color/transparent"
-        app:srcCompat="@drawable/end_button" />
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/endButton"
+            android:layout_width="140dp"
+            android:layout_height="59dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/classTypeDropDown"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/end_button" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/startTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/classTypeDropDown"
-        android:layout_toRightOf="@+id/startButton"
         android:layout_marginTop="15dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="170dp"
         android:text="Start Time" />
 
-    <ImageButton
-        android:id="@+id/startButton"
-        android:layout_width="140dp"
-        android:layout_height="59dp"
-        android:layout_below="@+id/classTypeDropDown"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="25dp"
-        android:scaleType="fitCenter"
-        android:background="@android:color/transparent"
-        app:srcCompat="@drawable/start_button" />
+    <LinearLayout
+        android:id="@+id/second_11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/classTypeDropDown">
+
+        <ImageButton
+            android:id="@+id/startButton"
+            android:layout_width="140dp"
+            android:layout_height="59dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/classTypeDropDown"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/start_button" />
+
+    </LinearLayout>
 
     <ImageButton
         android:id="@+id/backPageButton"

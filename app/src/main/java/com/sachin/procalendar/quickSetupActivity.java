@@ -8,6 +8,7 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -29,6 +30,9 @@ public class quickSetupActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quick_setup_cardview);
+
+        final LinearLayout firstLL = (LinearLayout) findViewById(R.id.first_11);
+        final LinearLayout secondLL = (LinearLayout) findViewById(R.id.second_11);
 
         // Done like this since android.support.widget.GridLayout can't be casted to android.widget.GridLayout
         android.support.v7.widget.GridLayout mainGrid = (android.support.v7.widget.GridLayout)findViewById(R.id.mainGrid);
