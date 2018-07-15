@@ -7,4 +7,13 @@
         <item>College</item>
         <item>School</item>
     </string-array>
+
+    <string-array name="quick_classTypeDrop">
+        <item>Select Class Type:</item>
+        <item>Lecture</item>
+        <item>Tutorial</item>
+        <item>Lab</item>
+        <item>Test</item>
+        <item>Other</item>
+    </string-array>
 </resources>

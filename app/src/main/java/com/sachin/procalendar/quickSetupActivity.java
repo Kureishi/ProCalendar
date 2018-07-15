@@ -6,16 +6,19 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
 import java.util.Calendar;
 
-public class quickSetupActivity extends AppCompatActivity{
+public class quickSetupActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     ImageButton startButton;
     ImageButton endButton;
@@ -42,10 +45,17 @@ public class quickSetupActivity extends AppCompatActivity{
         startTime = (TextView)findViewById(R.id.startTime);
         endTime = (TextView)findViewById(R.id.endTime);
 
-        // Implement to select column with day
+        daySelectColumn(mainGrid);                                                                  // Implement to select column with day
 
-        //setSingleEvent(mainGrid);
-        //setToggleEvent(mainGrid);
+        Spinner classTypeDropDown = findViewById(R.id.classTypeDropDown);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.quick_classTypeDrop, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        classTypeDropDown.setAdapter(adapter);
+
+        classTypeDropDown.setOnItemSelectedListener(this);
 
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -130,6 +140,86 @@ public class quickSetupActivity extends AppCompatActivity{
         });
     }
 
+    private void daySelectColumn (final android.support.v7.widget.GridLayout mainGrid) {
+        ImageButton saturdayButton = (ImageButton)findViewById(R.id.saturdayButton);
+        ImageButton sundayButton = (ImageButton)findViewById(R.id.sundayButton);
+        ImageButton mondayButton = (ImageButton)findViewById(R.id.mondayButton);
+        ImageButton tuesdayButton = (ImageButton)findViewById(R.id.tuesdayButton);
+        ImageButton wednesdayButton = (ImageButton)findViewById(R.id.wednesdayButton);
+        ImageButton thursdayButton = (ImageButton)findViewById(R.id.thursdayButton);
+        ImageButton fridayButton = (ImageButton)findViewById(R.id.fridayButton);
+
+        saturdayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                for (int i=0; i < 24; i++) {
+                    CardView cardView = (CardView) mainGrid.getChildAt(i);
+                    cardView.setCardBackgroundColor(Color.parseColor("#FFCC0000"));
+                }
+            }
+        });
+
+        sundayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                for (int i=24; i < 48; i++) {
+                    CardView cardView = (CardView) mainGrid.getChildAt(i);
+                    cardView.setCardBackgroundColor(Color.parseColor("#FFCC0000"));
+                }
+            }
+        });
+
+        mondayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                for (int i=48; i < 72; i++) {
+                    CardView cardView = (CardView) mainGrid.getChildAt(i);
+                    cardView.setCardBackgroundColor(Color.parseColor("#FFCC0000"));
+                }
+            }
+        });
+
+        tuesdayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                for (int i=72; i < 96; i++) {
+                    CardView cardView = (CardView) mainGrid.getChildAt(i);
+                    cardView.setCardBackgroundColor(Color.parseColor("#FFCC0000"));
+                }
+            }
+        });
+
+        wednesdayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                for (int i=96; i < 120; i++) {
+                    CardView cardView = (CardView) mainGrid.getChildAt(i);
+                    cardView.setCardBackgroundColor(Color.parseColor("#FFCC0000"));
+                }
+            }
+        });
+
+        thursdayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                for (int i=120; i < 144; i++) {
+                    CardView cardView = (CardView) mainGrid.getChildAt(i);
+                    cardView.setCardBackgroundColor(Color.parseColor("#FFCC0000"));
+                }
+            }
+        });
+
+        fridayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                for (int i=144; i < 168; i++) {
+                    CardView cardView = (CardView) mainGrid.getChildAt(i);
+                    cardView.setCardBackgroundColor(Color.parseColor("#FFCC0000"));
+                }
+            }
+        });
+    }
+
     private void setToggleEvent(android.support.v7.widget.GridLayout mainGrid) {
         for(int i=0; i < mainGrid.getChildCount(); i++) {
             final CardView cardView = (CardView) mainGrid.getChildAt(i);
@@ -160,5 +250,16 @@ public class quickSetupActivity extends AppCompatActivity{
                 }
             });
         }
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        String text = adapterView.getItemAtPosition(i).toString();                                  // take item at position 'i' and save into 'text'
+        Toast.makeText(adapterView.getContext(), text, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }
