@@ -27,7 +27,11 @@ public class quickSetupActivity extends AppCompatActivity implements AdapterView
 
     Calendar currentTime;
     int currentHour, currentMinute;
+    int startHourDay, endHourDay;
     String format;
+
+    String startString, endString;
+    int startNum, endNum, timeSlice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,12 @@ public class quickSetupActivity extends AppCompatActivity implements AdapterView
         endButton = (ImageButton)findViewById(R.id.endButton);
         startTime = (TextView)findViewById(R.id.startTime);
         endTime = (TextView)findViewById(R.id.endTime);
+
+//        startString = startTime.getText().toString();
+//        endString = endTime.getText().toString();
+//
+//        startNum = Integer.parseInt(startString);
+//        endNum = Integer.parseInt(endString);
 
         daySelectColumn(mainGrid);                                                                  // Implement to select column with day
 
@@ -77,21 +87,23 @@ public class quickSetupActivity extends AppCompatActivity implements AdapterView
                     public void onTimeSet(TimePicker timePicker, int hourOfDay, int minute) {
 
                         if(hourOfDay == 0) {
-                            hourOfDay = 12;
+//                            hourOfDay = 12;
                             format = "AM";
                         }
                         else if(hourOfDay == 12) {
                             format="PM";
                         }
                         else if(hourOfDay >= 12) {
-                            hourOfDay -= 12;
+//                            hourOfDay -= 12;
                             format = "PM";
                         }
                         else {
                             format = "AM";
                         }
 
-                        startTime.setText(String.format("%02d:%02d", hourOfDay, minute) + " " + format);
+                        startHourDay = hourOfDay;
+
+                        startTime.setText(String.format("%02d:%02d", startHourDay, minute) + " " + format);
                     }
                 }, currentHour, currentMinute, false);
                 timePickerDialog.show();
@@ -118,21 +130,23 @@ public class quickSetupActivity extends AppCompatActivity implements AdapterView
                     public void onTimeSet(TimePicker timePicker, int hourOfDay, int minute) {
 
                         if(hourOfDay == 0) {
-                            hourOfDay = 12;
+//                            hourOfDay = 12;
                             format = "AM";
                         }
                         else if(hourOfDay == 12) {
                             format="PM";
                         }
                         else if(hourOfDay >= 12) {
-                            hourOfDay -= 12;
+//                            hourOfDay -= 12;
                             format = "PM";
                         }
                         else {
                             format = "AM";
                         }
 
-                        endTime.setText(String.format("%02d:%02d", hourOfDay, minute) + " " + format);
+                        endHourDay = hourOfDay;
+
+                        endTime.setText(String.format("%02d:%02d", endHourDay, minute) + " " + format);
                     }
                 }, currentHour, currentMinute, false);
                 timePickerDialog.show();
@@ -152,7 +166,13 @@ public class quickSetupActivity extends AppCompatActivity implements AdapterView
         saturdayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                for (int i=0; i < 24; i++) {
+
+                Toast.makeText(quickSetupActivity.this, "Start: " + startHourDay, Toast.LENGTH_SHORT).show();
+                Toast.makeText(quickSetupActivity.this, "End: " + endHourDay, Toast.LENGTH_SHORT).show();
+                timeSlice = endHourDay - startHourDay;
+                Toast.makeText(quickSetupActivity.this, "Timeslice: " + timeSlice, Toast.LENGTH_SHORT).show();
+
+                for (int i=startHourDay; i <= endHourDay; i++) {
                     CardView cardView = (CardView) mainGrid.getChildAt(i);
                     cardView.setCardBackgroundColor(Color.parseColor("#FFCC0000"));
                 }
@@ -162,7 +182,13 @@ public class quickSetupActivity extends AppCompatActivity implements AdapterView
         sundayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                for (int i=24; i < 48; i++) {
+
+                Toast.makeText(quickSetupActivity.this, "Start: " + startHourDay, Toast.LENGTH_SHORT).show();
+                Toast.makeText(quickSetupActivity.this, "End: " + endHourDay, Toast.LENGTH_SHORT).show();
+                timeSlice = endHourDay - startHourDay;
+                Toast.makeText(quickSetupActivity.this, "Timeslice: " + timeSlice, Toast.LENGTH_SHORT).show();
+
+                for (int i=(startHourDay+24); i <= (endHourDay+24); i++) {
                     CardView cardView = (CardView) mainGrid.getChildAt(i);
                     cardView.setCardBackgroundColor(Color.parseColor("#FFCC0000"));
                 }
@@ -172,7 +198,13 @@ public class quickSetupActivity extends AppCompatActivity implements AdapterView
         mondayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                for (int i=48; i < 72; i++) {
+
+                Toast.makeText(quickSetupActivity.this, "Start: " + startHourDay, Toast.LENGTH_SHORT).show();
+                Toast.makeText(quickSetupActivity.this, "End: " + endHourDay, Toast.LENGTH_SHORT).show();
+                timeSlice = endHourDay - startHourDay;
+                Toast.makeText(quickSetupActivity.this, "Timeslice: " + timeSlice, Toast.LENGTH_SHORT).show();
+
+                for (int i=(startHourDay+48); i <= (endHourDay+48); i++) {
                     CardView cardView = (CardView) mainGrid.getChildAt(i);
                     cardView.setCardBackgroundColor(Color.parseColor("#FFCC0000"));
                 }
@@ -182,7 +214,13 @@ public class quickSetupActivity extends AppCompatActivity implements AdapterView
         tuesdayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                for (int i=72; i < 96; i++) {
+
+                Toast.makeText(quickSetupActivity.this, "Start: " + startHourDay, Toast.LENGTH_SHORT).show();
+                Toast.makeText(quickSetupActivity.this, "End: " + endHourDay, Toast.LENGTH_SHORT).show();
+                timeSlice = endHourDay - startHourDay;
+                Toast.makeText(quickSetupActivity.this, "Timeslice: " + timeSlice, Toast.LENGTH_SHORT).show();
+
+                for (int i=(startHourDay+72); i <= (endHourDay+72); i++) {
                     CardView cardView = (CardView) mainGrid.getChildAt(i);
                     cardView.setCardBackgroundColor(Color.parseColor("#FFCC0000"));
                 }
@@ -192,7 +230,13 @@ public class quickSetupActivity extends AppCompatActivity implements AdapterView
         wednesdayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                for (int i=96; i < 120; i++) {
+
+                Toast.makeText(quickSetupActivity.this, "Start: " + startHourDay, Toast.LENGTH_SHORT).show();
+                Toast.makeText(quickSetupActivity.this, "End: " + endHourDay, Toast.LENGTH_SHORT).show();
+                timeSlice = endHourDay - startHourDay;
+                Toast.makeText(quickSetupActivity.this, "Timeslice: " + timeSlice, Toast.LENGTH_SHORT).show();
+
+                for (int i=(startHourDay+96); i <= (endHourDay+96); i++) {
                     CardView cardView = (CardView) mainGrid.getChildAt(i);
                     cardView.setCardBackgroundColor(Color.parseColor("#FFCC0000"));
                 }
@@ -202,7 +246,13 @@ public class quickSetupActivity extends AppCompatActivity implements AdapterView
         thursdayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                for (int i=120; i < 144; i++) {
+
+                Toast.makeText(quickSetupActivity.this, "Start: " + startHourDay, Toast.LENGTH_SHORT).show();
+                Toast.makeText(quickSetupActivity.this, "End: " + endHourDay, Toast.LENGTH_SHORT).show();
+                timeSlice = endHourDay - startHourDay;
+                Toast.makeText(quickSetupActivity.this, "Timeslice: " + timeSlice, Toast.LENGTH_SHORT).show();
+
+                for (int i=(startHourDay+120); i <= (endHourDay+120); i++) {
                     CardView cardView = (CardView) mainGrid.getChildAt(i);
                     cardView.setCardBackgroundColor(Color.parseColor("#FFCC0000"));
                 }
@@ -212,7 +262,13 @@ public class quickSetupActivity extends AppCompatActivity implements AdapterView
         fridayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                for (int i=144; i < 168; i++) {
+
+                Toast.makeText(quickSetupActivity.this, "Start: " + startHourDay, Toast.LENGTH_SHORT).show();
+                Toast.makeText(quickSetupActivity.this, "End: " + endHourDay, Toast.LENGTH_SHORT).show();
+                timeSlice = endHourDay - startHourDay;
+                Toast.makeText(quickSetupActivity.this, "Timeslice: " + timeSlice, Toast.LENGTH_SHORT).show();
+
+                for (int i=(startHourDay+144); i <= (endHourDay+144); i++) {
                     CardView cardView = (CardView) mainGrid.getChildAt(i);
                     cardView.setCardBackgroundColor(Color.parseColor("#FFCC0000"));
                 }
