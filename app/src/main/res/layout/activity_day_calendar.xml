@@ -8,4 +8,24 @@
     android:background="@drawable/background"
     tools:context=".dayCalendarActivity">
 
+    <EditText
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Date" />
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/grid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="548dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="25dp"
+        app:columnCount="1"
+        app:rowCount="1440">
+
+    </android.support.v7.widget.GridLayout>
+
 </RelativeLayout>
