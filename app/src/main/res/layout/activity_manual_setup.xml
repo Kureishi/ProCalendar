@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_2"
+    tools:context=".manualSetupActivity">
+
+    <ImageView
+        android:id="@+id/manualSetupSubheading"
+        android:layout_width="178dp"
+        android:layout_height="29dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="90dp"
+        app:srcCompat="@drawable/manual_setup_subheading" />
+
+    <EditText
+        android:id="@+id/courseNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/manualSetupSubheading"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="Course #" />
+
+    <EditText
+        android:id="@+id/schoolEventName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/courseNumber"
+        android:layout_marginTop="10dp"
+        android:ems="16"
+        android:inputType="textPersonName"
+        android:hint="School/Event Name"
+        android:layout_alignParentLeft="true" />
+
+    <!--Collapsed ImageButtons for days of the week. Selected versions are in the background-->
+
+    <ImageButton
+        android:id="@+id/saturdayButtonSelected"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="240dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/saturday_button_selected" />
+
+    <ImageButton
+        android:id="@+id/saturdayButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="240dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/saturday_button" />
+
+    <ImageButton
+        android:id="@+id/sundayButtonSelected"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/saturdayButtonSelected"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="240dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/sunday_button_selected" />
+
+    <ImageButton
+        android:id="@+id/sundayButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/saturdayButton"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="240dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/sunday_button" />
+
+    <ImageButton
+        android:id="@+id/mondayButtonSelected"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="240dp"
+        android:layout_toRightOf="@+id/sundayButtonSelected"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/monday_button_selected" />
+
+    <ImageButton
+        android:id="@+id/mondayButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="240dp"
+        android:layout_toRightOf="@+id/sundayButton"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/monday_button" />
+
+    <ImageButton
+        android:id="@+id/tuesdayButtonSelected"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="240dp"
+        android:layout_toRightOf="@+id/mondayButtonSelected"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/tuesday_button_selected" />
+
+    <ImageButton
+        android:id="@+id/tuesdayButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="240dp"
+        android:layout_toRightOf="@+id/mondayButton"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/tuesday_button" />
+
+    <ImageButton
+        android:id="@+id/wednesdayButtonSelected"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="240dp"
+        android:layout_toRightOf="@+id/tuesdayButtonSelected"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/wednesday_button_selected" />
+
+    <ImageButton
+        android:id="@+id/wednesdayButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="240dp"
+        android:layout_toRightOf="@+id/tuesdayButton"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/wednesday_button" />
+
+    <ImageButton
+        android:id="@+id/thursdayButtonSelected"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="240dp"
+        android:layout_toRightOf="@+id/wednesdayButtonSelected"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/thursday_button_selected" />
+
+    <ImageButton
+        android:id="@+id/thursdayButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="240dp"
+        android:layout_toRightOf="@+id/wednesdayButton"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/thursday_button" />
+
+    <ImageButton
+        android:id="@+id/fridayButtonSelected"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="240dp"
+        android:layout_toRightOf="@+id/thursdayButtonSelected"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/friday_button_selected" />
+
+    <ImageButton
+        android:id="@+id/fridayButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="240dp"
+        android:layout_toRightOf="@+id/thursdayButton"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/friday_button" />
+
+    <!--Collapsed ImageButtons for days of the week. Selected versions are in the background-->
+
+    <TextView
+        android:id="@+id/startTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/schoolEventName"
+        android:layout_toRightOf="@+id/startButton"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="10dp"
+        android:text="Start Time" />
+
+    <ImageButton
+        android:id="@+id/startButton"
+        android:layout_width="140dp"
+        android:layout_height="59dp"
+        android:layout_below="@+id/schoolEventName"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="25dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/start_button" />
+
+    <TextView
+        android:id="@+id/endTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/startTime"
+        android:layout_toRightOf="@+id/endButton"
+        android:layout_marginTop="68dp"
+        android:layout_marginLeft="10dp"
+        android:text="End Time" />
+
+    <ImageButton
+        android:id="@+id/endButton"
+        android:layout_width="140dp"
+        android:layout_height="59dp"
+        android:layout_below="@+id/startButton"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/end_button" />
+
+    <!--Spinner to select Lecture/Tutorial/Lab (Class Type)-->
+
+    <Spinner
+        android:id="@+id/classTypeDropDown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/endButton"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true" />
+
+    <ImageButton
+        android:id="@+id/addCourseBlockButton"
+        android:layout_width="61dp"
+        android:layout_height="63dp"
+        android:layout_below="@+id/classTypeDropDown"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/add_course_block_button" />
+
+    <ImageButton
+        android:id="@+id/closeCourseBlockButton"
+        android:layout_width="24dp"
+        android:layout_height="25dp"
+        android:layout_toRightOf="@+id/fridayButton"
+        android:layout_below="@+id/schoolEventName"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="7dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/close_button2" />
+
+    <ImageView
+        android:id="@+id/addClassBlockMessage"
+        android:layout_width="178dp"
+        android:layout_height="29dp"
+        android:layout_below="@id/classTypeDropDown"
+        android:layout_toRightOf="@+id/addCourseBlockButton"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        app:srcCompat="@drawable/add_class_block_message" />
+
+    <ImageView
+        android:id="@+id/nextCourseMessage"
+        android:layout_width="178dp"
+        android:layout_height="29dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="105dp"
+        android:layout_marginBottom="59dp"
+        app:srcCompat="@drawable/next_course_message" />
+
+    <ImageButton
+        android:id="@+id/backPageButton"
+        android:layout_width="124dp"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="90dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/last_page"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true" />
+
+    <ImageButton
+        android:id="@+id/nextPageButton"
+        android:layout_width="124dp"
+        android:layout_height="28dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/next_page"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>
