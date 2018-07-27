@@ -1,9 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_2"
     tools:context=".entrepreneurActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/entrepreneurSetupSubheading"
+        android:layout_width="220dp"
+        android:layout_height="29dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="90dp"
+        app:srcCompat="@drawable/entrepreneur_setup_subheading" />
+
+    <ImageView
+        android:id="@+id/enterScheduleMessage"
+        android:layout_width="258dp"
+        android:layout_height="58dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        app:srcCompat="@drawable/enter_schedule_message" />
+
+    <ImageButton
+        android:id="@+id/setACOButton"
+        android:layout_width="305dp"
+        android:layout_height="76dp"
+        android:layout_below="@+id/enterScheduleMessage"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/set_aco_button" />
+
+    <ImageView
+        android:id="@+id/noteACOPurposeMessage"
+        android:layout_width="337dp"
+        android:layout_height="145dp"
+        android:layout_below="@+id/setACOButton"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/note_aco_purpose" />
+
+    <ImageButton
+        android:id="@+id/quickSetupButton"
+        android:layout_width="295dp"
+        android:layout_height="76dp"
+        android:layout_below="@+id/noteACOPurposeMessage"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/quick_setup_option_button" />
+
+    <ImageButton
+        android:id="@+id/backPageButton"
+        android:layout_width="124dp"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="90dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/last_page"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>
