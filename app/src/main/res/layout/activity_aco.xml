@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_2"
+    tools:context=".acoActivity">
+
+    <ImageView
+        android:id="@+id/acoSubheading"
+        android:layout_width="222dp"
+        android:layout_height="29dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="90dp"
+        app:srcCompat="@drawable/aco_subheading"/>
+
+    <ImageView
+        android:id="@+id/acoRecommendationMessage"
+        android:layout_width="314dp"
+        android:layout_height="116dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        app:srcCompat="@drawable/aco_recommendation_message" />
+
+    <ImageView
+        android:id="@+id/activeDaysHeading"
+        android:layout_width="297dp"
+        android:layout_height="29dp"
+        android:layout_below="@+id/acoRecommendationMessage"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/active_days_heading"/>
+
+    <CheckBox
+        android:id="@+id/aSaturday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/activeDaysHeading"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="10dp"
+        android:text="Sa" />
+
+    <CheckBox
+        android:id="@+id/aSunday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/activeDaysHeading"
+        android:layout_toRightOf="@+id/aSaturday"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="5dp"
+        android:text="Su" />
+
+    <CheckBox
+        android:id="@+id/aMonday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/activeDaysHeading"
+        android:layout_toRightOf="@+id/aSunday"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="5dp"
+        android:text="Mo" />
+
+    <CheckBox
+        android:id="@+id/aTuesday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/activeDaysHeading"
+        android:layout_toRightOf="@+id/aMonday"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="5dp"
+        android:text="Tu" />
+
+    <CheckBox
+        android:id="@+id/aWednesday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/activeDaysHeading"
+        android:layout_toRightOf="@+id/aTuesday"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="5dp"
+        android:text="We" />
+
+    <CheckBox
+        android:id="@+id/aThursday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/activeDaysHeading"
+        android:layout_toRightOf="@+id/aWednesday"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="5dp"
+        android:text="Th" />
+
+    <CheckBox
+        android:id="@+id/aFriday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/activeDaysHeading"
+        android:layout_toRightOf="@+id/aThursday"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="5dp"
+        android:text="Fr" />
+
+    <ImageView
+        android:id="@+id/coolDaysHeading"
+        android:layout_width="303dp"
+        android:layout_height="29dp"
+        android:layout_below="@+id/activeDaysHeading"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="70dp"
+        app:srcCompat="@drawable/cool_days_heading"/>
+
+    <CheckBox
+        android:id="@+id/cSaturday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/coolDaysHeading"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="10dp"
+        android:text="Sa" />
+
+    <CheckBox
+        android:id="@+id/cSunday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/coolDaysHeading"
+        android:layout_toRightOf="@+id/cSaturday"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="5dp"
+        android:text="Su" />
+
+    <CheckBox
+        android:id="@+id/cMonday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/coolDaysHeading"
+        android:layout_toRightOf="@+id/cSunday"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="5dp"
+        android:text="Mo" />
+
+    <CheckBox
+        android:id="@+id/cTuesday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/coolDaysHeading"
+        android:layout_toRightOf="@+id/cMonday"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="5dp"
+        android:text="Tu" />
+
+    <CheckBox
+        android:id="@+id/cWednesday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/coolDaysHeading"
+        android:layout_toRightOf="@+id/cTuesday"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="5dp"
+        android:text="We" />
+
+    <CheckBox
+        android:id="@+id/cThursday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/coolDaysHeading"
+        android:layout_toRightOf="@+id/cWednesday"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="5dp"
+        android:text="Th" />
+
+    <CheckBox
+        android:id="@+id/cFriday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/coolDaysHeading"
+        android:layout_toRightOf="@+id/cThursday"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="5dp"
+        android:text="Fr" />
+
+    <ImageView
+        android:id="@+id/offDaysHeading"
+        android:layout_width="292dp"
+        android:layout_height="29dp"
+        android:layout_below="@+id/coolDaysHeading"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="70dp"
+        app:srcCompat="@drawable/off_days_heading"/>
+
+    <CheckBox
+        android:id="@+id/oSaturday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/offDaysHeading"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="10dp"
+        android:text="Sa" />
+
+    <CheckBox
+        android:id="@+id/oSunday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/offDaysHeading"
+        android:layout_toRightOf="@+id/oSaturday"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="5dp"
+        android:text="Su" />
+
+    <CheckBox
+        android:id="@+id/oMonday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/offDaysHeading"
+        android:layout_toRightOf="@+id/oSunday"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="5dp"
+        android:text="Mo" />
+
+    <CheckBox
+        android:id="@+id/oTuesday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/offDaysHeading"
+        android:layout_toRightOf="@+id/oMonday"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="5dp"
+        android:text="Tu" />
+
+    <CheckBox
+        android:id="@+id/oWednesday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/offDaysHeading"
+        android:layout_toRightOf="@+id/oTuesday"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="5dp"
+        android:text="We" />
+
+    <CheckBox
+        android:id="@+id/oThursday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/offDaysHeading"
+        android:layout_toRightOf="@+id/oWednesday"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="5dp"
+        android:text="Th" />
+
+    <CheckBox
+        android:id="@+id/oFriday"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/offDaysHeading"
+        android:layout_toRightOf="@+id/oThursday"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="5dp"
+        android:text="Fr" />
+
+    <ImageButton
+        android:id="@+id/backPageButton"
+        android:layout_width="124dp"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="90dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/last_page"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true" />
+
+    <ImageButton
+        android:id="@+id/nextPageButton"
+        android:layout_width="124dp"
+        android:layout_height="28dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/next_page"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>
