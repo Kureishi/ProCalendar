@@ -32,6 +32,18 @@
 
     <!--endButton overlapped by startButton-->
 
+    <ImageButton
+        android:id="@+id/clearLastButton"
+        android:layout_width="58dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/classTypeDropDown"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="40dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/clear_last_button" />
+
     <TextView
         android:id="@+id/endTime"
         android:layout_width="wrap_content"
