@@ -5,9 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
-public class secondActivity extends AppCompatActivity {
+public class occupationActivity extends AppCompatActivity {
 
     private ImageButton entrepreneurBtn;
     private ImageButton professionalBtn;
@@ -16,7 +15,7 @@ public class secondActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.activity_occupation);
 
         entrepreneurBtn = (ImageButton)findViewById(R.id.entrepreneurOptionButton);
         professionalBtn = (ImageButton)findViewById(R.id.professionalOptionButton);
@@ -25,7 +24,7 @@ public class secondActivity extends AppCompatActivity {
         entrepreneurBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentEntrepreneurActivity = new Intent(secondActivity.this, entrepreneurActivity.class);
+                Intent intentEntrepreneurActivity = new Intent(occupationActivity.this, entrepreneurActivity.class);
                 startActivity(intentEntrepreneurActivity);
             }
         });
@@ -33,7 +32,7 @@ public class secondActivity extends AppCompatActivity {
         professionalBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentProfessionalActivity = new Intent(secondActivity.this, professionalActivity.class);
+                Intent intentProfessionalActivity = new Intent(occupationActivity.this, professionalActivity.class);
                 startActivity(intentProfessionalActivity);
             }
         });
@@ -41,7 +40,7 @@ public class secondActivity extends AppCompatActivity {
         studentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentStudentActivity = new Intent(secondActivity.this, studentActivity.class);
+                Intent intentStudentActivity = new Intent(occupationActivity.this, studentActivity.class);
                 startActivity(intentStudentActivity);
             }
         });

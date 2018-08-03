@@ -1,11 +1,7 @@
 package com.sachin.procalendar;
 
 import android.Manifest;
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.DatePickerDialog;
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -18,17 +14,13 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.app.DatePickerDialog;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.DateFormat;
 import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -105,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
                 askPermission(Manifest.permission.ACCESS_FINE_LOCATION, LOCATION_REQUEST_CODE);
                 askPermission(Manifest.permission.RECORD_AUDIO, AUDIO_REQUEST_CODE);
 
-                Intent intentSecondActivity = new Intent(MainActivity.this, secondActivity.class);  // from Main to second screen
+                Intent intentSecondActivity = new Intent(MainActivity.this, occupationActivity.class);  // from Main to second screen
                 startActivity(intentSecondActivity);
             }
         });

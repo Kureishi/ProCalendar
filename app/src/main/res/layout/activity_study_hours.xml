@@ -6,65 +6,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_2"
-    tools:context=".secondActivity">
+    tools:context=".occupationActivity">
 
     <ImageView
-        android:id="@+id/setupSubheading"
-        android:layout_width="63dp"
+        android:id="@+id/studyHoursSetupSubheading"
+        android:layout_width="225dp"
         android:layout_height="29dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="90dp"
-        app:srcCompat="@drawable/setup_subheading"/>
+        app:srcCompat="@drawable/study_hours_setup_subheading"/>
 
     <ImageView
-        android:id="@+id/selectModeMessage"
-        android:layout_width="326dp"
-        android:layout_height="29dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="130dp"
-        app:srcCompat="@drawable/select_mode" />
-
-    <ImageView
-        android:id="@+id/noteModeChangeableMessage"
+        android:id="@+id/noteEffectiveStudyingMessage"
         android:layout_width="306dp"
         android:layout_height="116dp"
-        android:layout_below="@+id/selectModeMessage"
+        android:layout_below="@+id/studyHoursSetupSubheading"
         android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/note_mode_changeable" />
+        app:srcCompat="@drawable/note_effective_studying" />
 
     <ImageButton
-        android:id="@+id/studentOptionButton"
+        android:id="@+id/effectiveStudyMethodButton"
         android:layout_width="305dp"
         android:layout_height="76dp"
-        android:layout_below="@+id/noteModeChangeableMessage"
+        android:layout_below="@+id/noteEffectiveStudyingMessage"
         android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"
         android:scaleType="fitCenter"
         android:background="@android:color/transparent"
-        app:srcCompat="@drawable/student_option_button" />
+        app:srcCompat="@drawable/effective_study_method_button" />
 
     <ImageButton
-        android:id="@+id/entrepreneurOptionButton"
-        android:layout_width="305dp"
+        android:id="@+id/quickSetupButton"
+        android:layout_width="295dp"
         android:layout_height="76dp"
-        android:layout_below="@+id/studentOptionButton"
+        android:layout_below="@+id/effectiveStudyMethodButton"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:scaleType="fitCenter"
         android:background="@android:color/transparent"
-        app:srcCompat="@drawable/entrepreneur_option_button" />
+        app:srcCompat="@drawable/quick_setup_option_button" />
 
     <ImageButton
-        android:id="@+id/professionalOptionButton"
-        android:layout_width="305dp"
+        android:id="@+id/skipButton"
+        android:layout_width="295dp"
         android:layout_height="76dp"
-        android:layout_below="@+id/entrepreneurOptionButton"
+        android:layout_below="@+id/quickSetupButton"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:scaleType="fitCenter"
         android:background="@android:color/transparent"
-        app:srcCompat="@drawable/professional_option_button" />
+        app:srcCompat="@drawable/skip_button" />
 
 </RelativeLayout>
