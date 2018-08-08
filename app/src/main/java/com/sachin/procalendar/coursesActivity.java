@@ -14,22 +14,5 @@ import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-public class coursesActivity extends AppCompatActivity {
-
-    private ImageButton backButton;                                                                 // image button variable to go previous page and clears numOfCourses
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        backButton = (ImageButton)findViewById(R.id.backPageButton);
-
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentStudentActivity = new Intent(coursesActivity.this, studentActivity.class);
-                startActivity(intentStudentActivity);
-            }
-        });
-    }
+public class coursesActivity{
 }

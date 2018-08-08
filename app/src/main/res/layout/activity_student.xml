@@ -68,7 +68,14 @@
         android:layout_centerHorizontal="true"
         android:ems="16"
         android:hint="Number of Courses"
-        android:inputType="textPersonName" />
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numOfCourses"
+        android:layout_alignParentRight="true"/>
 
     <ImageView
         android:id="@+id/enterScheduleHeading"
@@ -88,16 +95,5 @@
         android:ems="16"
         android:checked="false"
         android:text="8 hours, all working days" />
-
-    <ImageButton
-        android:id="@+id/backPageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="90dp"
-        android:background="@android:color/transparent"
-        app:srcCompat="@drawable/last_page"
-        android:layout_marginRight="5dp"
-        android:layout_alignParentRight="true" />
 
 </RelativeLayout>

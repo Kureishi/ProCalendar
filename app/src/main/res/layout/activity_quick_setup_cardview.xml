@@ -105,17 +105,6 @@
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/backPageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="45dp"
-        android:background="@android:color/transparent"
-        app:srcCompat="@drawable/last_page"
-        android:layout_marginRight="5dp"
-        android:layout_alignParentRight="true" />
-
-    <ImageButton
         android:id="@+id/nextPageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

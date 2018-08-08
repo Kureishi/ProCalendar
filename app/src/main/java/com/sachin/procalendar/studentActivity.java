@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -22,7 +23,8 @@ public class studentActivity extends AppCompatActivity implements AdapterView.On
     CheckBox eightHourCheckBox;
 
     ImageButton quickSetupButton;
-    private ImageButton backButton;                                                                 // image button variable to go previous page
+    Button goButton;
+    public EditText mNumOfCourses;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,16 +38,9 @@ public class studentActivity extends AppCompatActivity implements AdapterView.On
         eightHourCheckBox = (CheckBox)findViewById(R.id.checkBox);
 
         quickSetupButton = (ImageButton)findViewById(R.id.quickSetupButton);
+        goButton = findViewById(R.id.go);
 
-        backButton = (ImageButton)findViewById(R.id.backPageButton);
-
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentOccupationActivity = new Intent(studentActivity.this, occupationActivity.class);
-                startActivity(intentOccupationActivity);
-            }
-        });
+        mNumOfCourses = findViewById(R.id.numOfCourses);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,           // reference spinner/drop-down with array created
                 R.array.student_eduLevel, android.R.layout.simple_spinner_item);                    // layout file for single item
@@ -66,6 +61,14 @@ public class studentActivity extends AppCompatActivity implements AdapterView.On
                     }
                 }, 0, 0, false);
                 timePickerDialog.show();
+            }
+        });
+
+        goButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentCoursesActivity = new Intent(studentActivity.this, coursesActivity.class);
+                startActivity(intentCoursesActivity);
             }
         });
 
