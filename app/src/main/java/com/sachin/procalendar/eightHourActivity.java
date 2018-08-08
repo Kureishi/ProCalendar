@@ -1,6 +1,5 @@
 package com.sachin.procalendar;
 
-import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -25,7 +24,7 @@ public class eightHourActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eighthour);
+        setContentView(R.layout.activity_eight_hour);
 
         startButton = (ImageButton)findViewById(R.id.startButton);
         endButton = (ImageButton)findViewById(R.id.endButton);

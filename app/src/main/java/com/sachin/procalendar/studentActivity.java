@@ -22,6 +22,7 @@ public class studentActivity extends AppCompatActivity implements AdapterView.On
     CheckBox eightHourCheckBox;
 
     ImageButton quickSetupButton;
+    private ImageButton backButton;                                                                 // image button variable to go previous page
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,16 @@ public class studentActivity extends AppCompatActivity implements AdapterView.On
         eightHourCheckBox = (CheckBox)findViewById(R.id.checkBox);
 
         quickSetupButton = (ImageButton)findViewById(R.id.quickSetupButton);
+
+        backButton = (ImageButton)findViewById(R.id.backPageButton);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentOccupationActivity = new Intent(studentActivity.this, occupationActivity.class);
+                startActivity(intentOccupationActivity);
+            }
+        });
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,           // reference spinner/drop-down with array created
                 R.array.student_eduLevel, android.R.layout.simple_spinner_item);                    // layout file for single item
