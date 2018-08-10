@@ -20,13 +20,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".coursesActivity" />
         <activity android:name=".occupationActivity" />
         <activity android:name=".studentActivity" />
         <activity android:name=".professionalActivity" />
         <activity android:name=".eightHourActivity" />
         <activity android:name=".quickSetupPopupActivity" />
         <activity android:name=".quickSetupActivity" />
-        <activity android:name=".entrepreneurActivity"></activity>
+        <activity android:name=".entrepreneurActivity" />
     </application>
 
 </manifest>

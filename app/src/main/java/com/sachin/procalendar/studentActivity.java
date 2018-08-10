@@ -4,6 +4,9 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,19 +15,25 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
 public class studentActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
-    EditText commuteTime;
+    public static String uNumOfCourses;
+
+    TextView commuteTime;
     TimePickerDialog timePickerDialog;
 
     CheckBox eightHourCheckBox;
 
     ImageButton quickSetupButton;
-    Button goButton;
-    public EditText mNumOfCourses;
+
+    private EditText mNumOfCourses;
+
+    public studentActivity() {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,14 +42,16 @@ public class studentActivity extends AppCompatActivity implements AdapterView.On
 
         Spinner eduLevelSpinner = findViewById(R.id.educationLevelDropDown);
 
-        commuteTime = (EditText)findViewById(R.id.commuteTime);
+        commuteTime = (TextView)findViewById(R.id.commuteTime);
 
         eightHourCheckBox = (CheckBox)findViewById(R.id.checkBox);
 
         quickSetupButton = (ImageButton)findViewById(R.id.quickSetupButton);
-        goButton = findViewById(R.id.go);
 
         mNumOfCourses = findViewById(R.id.numOfCourses);
+
+        mNumOfCourses.addTextChangedListener(signUpTextWatcher);
+        uNumOfCourses = mNumOfCourses.getText().toString();
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,           // reference spinner/drop-down with array created
                 R.array.student_eduLevel, android.R.layout.simple_spinner_item);                    // layout file for single item
@@ -61,14 +72,6 @@ public class studentActivity extends AppCompatActivity implements AdapterView.On
                     }
                 }, 0, 0, false);
                 timePickerDialog.show();
-            }
-        });
-
-        goButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentCoursesActivity = new Intent(studentActivity.this, coursesActivity.class);
-                startActivity(intentCoursesActivity);
             }
         });
 
@@ -105,4 +108,30 @@ public class studentActivity extends AppCompatActivity implements AdapterView.On
     public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
+
+    private TextWatcher signUpTextWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int start, int before, int count) {    // when type in or remove character
+            String uNumOfCoursesInput = mNumOfCourses.getText().toString();
+
+            mNumOfCourses.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intentCoursesActivity = new Intent(studentActivity.this, coursesActivity.class);
+                    intentCoursesActivity.putExtra ( "TextBox", mNumOfCourses.getText().toString() ); //Passing number of courses to activity_activity
+                    startActivity(intentCoursesActivity);
+                }
+            });
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+
+        }
+    };
 }

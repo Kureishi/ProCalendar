@@ -16,6 +16,44 @@
         android:layout_marginTop="90dp"
         app:srcCompat="@drawable/course_setup_subheading"/>
 
+    <TextView
+        android:id="@+id/num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/courseSetupSubheading"/>
+
+    <ScrollView
+        android:id="@+id/courseList"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/num"
+        android:background="@drawable/scroll_view_background">
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/deleteCourseButton"
+        android:layout_width="58dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/nextPageButton"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="7dp"
+        android:layout_marginRight="40dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/delete_course_button" />
+
+    <ImageButton
+        android:id="@+id/addCourseButton"
+        android:layout_width="58dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/nextPageButton"
+        android:layout_toLeftOf="@+id/deleteCourseButton"
+        android:layout_marginBottom="7dp"
+        android:layout_marginRight="15dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/add_course_button" />
+
     <ImageButton
         android:id="@+id/nextPageButton"
         android:layout_width="wrap_content"
